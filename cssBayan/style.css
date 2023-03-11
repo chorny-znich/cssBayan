@@ -1,4 +1,21 @@
+ul {
+  list-style: none;
+}
 .wrapper {
   display: flex;
   justify-content: center;
+}
+.mem__title {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.mem__check {
+  display: none;
+}
+.mem__content {
+  display: none;
+  transition: display 0.5s;
+}
+input[type="radio"]:checked+.mem__content {
+  display: block;
 }
