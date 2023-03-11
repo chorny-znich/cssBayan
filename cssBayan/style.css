@@ -6,6 +6,8 @@ ul {
   justify-content: center;
 }
 .mem__title {
+  display: flex;
+  justify-content: space-between;
   font-size: 2rem;
   cursor: pointer;
 }
@@ -13,9 +15,20 @@ ul {
   display: none;
 }
 .mem__content {
-  display: none;
-  transition: display 0.5s;
+  height: 0;
+  transition: height 0.5s;
+  overflow: hidden;
 }
-input[type="radio"]:checked+.mem__content {
-  display: block;
+input[type="radio"]:checked+.mem__title {
+}
+input[type="radio"]+.mem__title span {
+  transform: rotate(45deg);
+  background: red;
+}
+input[type="radio"]:checked+.mem__title span {
+  transform: rotate(0deg);
+  background: green;
+}
+input[type="radio"]:checked~.mem__content {
+  height: 600px;
 }
