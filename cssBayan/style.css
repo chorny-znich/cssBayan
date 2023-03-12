@@ -27,9 +27,18 @@ mem-container:hover span {
 .mem__title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 2rem;
   line-height: 3rem;
   cursor: pointer;
+}
+.icon {
+  width: 1rem;
+  height: 0;
+  transition: transform 0.5s;
+}
+.mem-container:hover .icon {
+  height: 1rem;
 }
 .mem__check {
   display: none;
@@ -49,6 +58,12 @@ input[type="radio"]+.mem__title span {
 input[type="radio"]:checked+.mem__title span {
   transform: rotate(0deg);
   background: green;
+}
+input[type="radio"]:checked+.mem__title .icon {
+  transform: rotate(45deg);
+}
+.mem__title:hover .icon {
+  transform: rotate(45deg);
 }
 input[type="radio"]:checked~.mem__content {
   height: 33rem;
