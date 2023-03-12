@@ -29,7 +29,7 @@ mem-container:hover span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 3rem;
   cursor: pointer;
   border-top: thin solid grey;
@@ -46,6 +46,8 @@ mem-container:hover span {
   display: none;
 }
 .mem__content {
+  display: flex;
+  justify-content: center;
   height: 0;
   transition: height 0.5s;
   overflow: hidden;
