@@ -3,6 +3,7 @@
 }
 h1 {
   color: #000;
+  text-align: center;
 }
 ul {
   list-style: none;
@@ -31,6 +32,7 @@ mem-container:hover span {
   font-size: 2rem;
   line-height: 3rem;
   cursor: pointer;
+  border-top: thin solid grey;
 }
 .icon {
   width: 1rem;
@@ -47,6 +49,9 @@ mem-container:hover span {
   height: 0;
   transition: height 0.5s;
   overflow: hidden;
+}
+.mem__image {
+  height: 29vh;
 }
 input[type="radio"]:checked+.mem__title {
   color: black;
@@ -66,8 +71,8 @@ input[type="radio"]:checked+.mem__title .icon {
   transform: rotate(45deg);
 }
 input[type="radio"]:checked~.mem__content {
-  height: 33rem;
+  height: 30vh;
 }
 .mem__title:hover~.mem__content {
-  height: 33rem;
+  height: 30vh;
 }
