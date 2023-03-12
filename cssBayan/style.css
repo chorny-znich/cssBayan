@@ -19,12 +19,6 @@ ul {
   color: #000;
   cursor: pointer;
 }
-mem-container:hover span {
-  background-image: url("./assets/img/plus.png");
-} 
-.mem-container:hover span {
-  color: yellow;
-}
 .mem__title {
   display: flex;
   justify-content: space-between;
@@ -69,6 +63,7 @@ mem-container:hover span {
 @media (max-width: 320px) {
   .mem__title {
     font-size: 0.9rem;
+    line-height: 2em;
   }
   .icon {
     width: 0.6rem;
