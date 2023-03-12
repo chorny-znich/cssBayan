@@ -1,0 +1,91 @@
+* {
+  overflow: hidden;
+  user-select: none;
+}
+h1 {
+  color: #000;
+  text-align: center;
+}
+ul {
+  list-style: none;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+.mem-container {
+  color:blue;
+}
+.mem-container:hover {
+  color: #000;
+  cursor: pointer;
+}
+.mem__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  cursor: pointer;
+  border-top: thin solid grey;
+}
+.icon {
+  width: 1rem;
+  height: 0;
+  transition: transform 0.5s;
+}
+.mem-container:hover .icon {
+  height: 1rem;
+}
+.mem__check {
+  display: none;
+}
+.mem__content {
+  display: flex;
+  justify-content: center;
+  height: 0;
+  transition: height 0.5s;
+  overflow: hidden;
+}
+.mem__image {
+  height: 29vh;
+}
+@media (max-width: 820px) {
+  .mem__title {
+    font-size: 1.2rem;
+  }
+  .icon {
+    width: 0.8rem;
+  }
+  .mem-container:hover .icon {
+    height: 0.8rem;
+  }
+}
+@media (max-width: 320px) {
+  .mem__title {
+    font-size: 0.9rem;
+    line-height: 2em;
+  }
+  .icon {
+    width: 0.6rem;
+  }
+  .mem-container:hover .icon {
+    height: 0.6rem;
+  }
+}
+
+input[type="radio"]:checked+.mem__title {
+  color: black;
+}
+input[type="radio"]:checked+.mem__title .icon {
+  transform: rotate(45deg);
+}
+.mem__title:hover .icon {
+  transform: rotate(45deg);
+}
+input[type="radio"]:checked~.mem__content {
+  height: 30vh;
+}
+.mem__title:hover~.mem__content {
+  height: 30vh;
+}
