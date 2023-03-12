@@ -1,9 +1,25 @@
+h1 {
+  color: #000;
+}
 ul {
   list-style: none;
 }
 .wrapper {
   display: flex;
   justify-content: center;
+}
+.mem-container {
+  color:blue;
+}
+.mem-container:hover {
+  color: #000;
+  cursor: pointer;
+}
+mem-container:hover span {
+  background-image: url("./assets/img/plus.png");
+} 
+.mem-container:hover span {
+  color: yellow;
 }
 .mem__title {
   display: flex;
@@ -20,6 +36,7 @@ ul {
   overflow: hidden;
 }
 input[type="radio"]:checked+.mem__title {
+  color: black;
 }
 input[type="radio"]+.mem__title span {
   transform: rotate(45deg);
@@ -30,5 +47,5 @@ input[type="radio"]:checked+.mem__title span {
   background: green;
 }
 input[type="radio"]:checked~.mem__content {
-  height: 600px;
+  height: 33rem;
 }
